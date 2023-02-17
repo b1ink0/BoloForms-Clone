@@ -81,7 +81,7 @@ export default function FifthSection() {
   ]);
   return (
     <section className="w-full flex flex-col justify-center items-center px-4 md:px-[88px] mt-24">
-      <div className="w-full flex flex-col justify-center items-center px-4 mb-16">
+      <div id="section_5" className="w-full flex flex-col justify-center items-center px-4 mb-16">
         <h3 className="text-2xl md:text-3xl font-bold mb-2">Features</h3>
         <p className="text-base md:text-lg text-center">
           Everything that your organisation will love, & more.

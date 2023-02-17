@@ -57,11 +57,11 @@
   }
 }
 
-::-webkit-scrollbar {
+.scroll_div::-webkit-scrollbar {
   width: 0;
   background: transparent;
 }
-::-webkit-scrollbar-thumb {
+.scroll_div::-webkit-scrollbar-thumb {
   background: transparent;
 }
 

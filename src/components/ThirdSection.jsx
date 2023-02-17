@@ -7,7 +7,7 @@ import img3 from "../assets/third_section_img_3.svg";
 export default function ThirdSection() {
   return (
     <section className="w-full flex flex-col justify-center items-center px-4 md:px-[88px] mt-12">
-        <h3 className="text-xl md:text-3xl font-semibold mb-2">How does BoloForms work?</h3>
+        <h3 id="section_3" className="text-xl md:text-3xl font-semibold mb-2">How does BoloForms work?</h3>
         <p className="text-xs md:text-sm">Set up your first workflow in just 3 easy steps.</p>
         <div className="w-full flex flex-col md:flex-row justify-center items-center md:gap-6">
             <div className="w-full flex flex-col md:flex-col-reverse justify-center items-center mt-12">

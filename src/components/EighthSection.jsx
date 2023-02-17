@@ -46,7 +46,7 @@ export default function EighthSection() {
     },
   ]);
   return (
-    <section className="w-full flex flex-col justify-center items-center px-8 md:px-[88px] mt-24">
+    <section id="section_8" className="w-full flex flex-col justify-center items-center px-8 md:px-[88px] mt-24">
       <div className="w-full flex flex-col justify-center items-center mb-12">
         <img className="w-auto h-10" src={img1} alt="" />
         <h3 className="text-3xl md:text-5xl font-bold text-center mt-4">
