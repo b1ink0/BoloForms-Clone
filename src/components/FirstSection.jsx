@@ -1,5 +1,5 @@
 import React from "react";
-import Icon1 from "../icons/icon1";
+import Icon1 from "../icons/Icon1";
 
 export default function FirstSection() {
   return (
