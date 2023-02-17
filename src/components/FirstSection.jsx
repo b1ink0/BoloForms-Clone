@@ -25,13 +25,16 @@ export default function FirstSection() {
           </p>
         </button>
       </div>
-      <div className="w-full h-72 border-4 border-[color:var(--color-primary)] flex justify-center items-center rounded-2xl overflow-hidden">
+      <div className="w-full md:pr-44">
+      <div className="w-full md:max-w-[600px] h-72 border-4 border-[color:var(--color-primary)] flex justify-center items-center rounded-2xl overflow-hidden">
         <iframe
           className="w-full h-full"
           src="https://www.youtube.com/embed/riiUkCRpIio"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         ></iframe>
+      </div>
+
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../assets/logo.svg";
 import burger from "../assets/nav_burger.svg";
 import close from "../assets/nav_close.svg";
@@ -10,10 +10,25 @@ import Img3 from "../assets/nav_img_3.svg";
 export default function Navbar() {
   const [show, setShow] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+
+  useEffect(() => {
+    if (document.getElementById("root")) {
+      function handleClickOutside(event) {
+        if (document.getElementById("root").contains(event.target)) {
+          setShowMenu(false);
+        }
+      }
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }
+  }, []);
+
   return (
     <nav
       style={{ height: show ? "100%" : "" }}
-      className="w-full md:h-[75px] fixed top-0 flex flex-col md:flex-row justify-start md:justify-around items-center bg-nav"
+      className="w-full md:h-[75px] xl:px-44 fixed top-0 flex flex-col md:flex-row justify-start md:justify-around items-center bg-nav"
     >
       <div className="w-full md:w-fit h-[75px] flex justify-between items-center px-4">
         <a href="/">
@@ -74,21 +89,21 @@ export default function Navbar() {
       )}
       <div className="hidden md:flex fadeIn w-full lg:w-[calc(100%_-_128px)] h-full md:h-auto flex-col md:flex-row justify-start md:justify-between items-start md:items-center bg-nav-secondary md:bg-[#00000000] px-4 pt-8 md:pt-0">
         <div className="w-auto flex justify-evenly items-center">
-          <a
-            className="text-lg text-[#262626] font-medium md:font-semibold md:text-sm cursor-pointer mb-4 md:mb-0 mr-9"
-            href=""
-          >
-            Products
-          </a>
           <button
             className="text-lg text-[#262626] font-medium md:font-semibold md:text-sm cursor-pointer mb-4 md:mb-0 mr-9 flex"
             onClick={() => setShowMenu((prev) => !prev)}
           >
-            Pricing
+            Product
             <div className="w-5 h-5 rotate-180 ml-1">
               <Icon4 />
             </div>
           </button>
+          <a
+            className="text-lg text-[#262626] font-medium md:font-semibold md:text-sm cursor-pointer mb-4 md:mb-0 mr-9"
+            href=""
+          >
+            Pricing
+          </a>
           <a
             className="text-lg md:hidden text-[#262626] font-medium md:font-semibold md:text-sm cursor-pointer mb-4 md:mb-0 mr-2"
             href=""
@@ -124,12 +139,18 @@ export default function Navbar() {
         </div>
       </div>
       {showMenu && (
-        <div className="max-w-[750px] border box-shadow-tertiary fixed top-[75px]  bg-nav-secondary p-6 bg-white rounded-xl" onClick={() => setShowMenu(prev => !prev)}>
+        <div
+          className="max-w-[750px] border box-shadow-tertiary fixed top-[75px]  bg-nav-secondary p-6 bg-white rounded-xl"
+          onClick={() => setShowMenu((prev) => !prev)}
+        >
           <div className="flex p-4 gap-4 mt-6 rounded-xl hover:bg-[#f3e8ff]">
             <img className="w-6 h-6" src={Img1} />
             <div className="flex flex-col justify-center items-start">
               <h3 className="font-semibold text-base">Form Approvals</h3>
-              <p className="text-sm">Create interactive workflows, approval flows & automate processes using Google Forms.</p>
+              <p className="text-sm">
+                Create interactive workflows, approval flows & automate
+                processes using Google Forms.
+              </p>
             </div>
           </div>
           <div className="flex p-4 gap-4 mt-3 rounded-xl hover:bg-[#f3e8ff]">
