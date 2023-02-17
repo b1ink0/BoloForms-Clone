@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Poppins", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --color-primary: #915bff;
+}
+
+*{
+  scroll-behavior: smooth;
+}
+
+@layer components {
+  .text-primary {
+    color: var(--color-primary);
+  }
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+  .bg-secondary {
+    background-color: #f9fafb;
+  }
+  .bg-nav {
+    background-color: #fafafaf2;
+  }
+  .bg-nav-secondary {
+    background-color: #f1f4f6;
+  }
+  .box-shadow-primary {
+    box-shadow: 0px 20px 40px 0px #021e461a;
+  }
+  .box-shadow-secondary {
+    box-shadow: #0007283b 0px 10px 50px 0px;
+  }
+  .box-shadow-tertiary {
+    box-shadow: #0000000a 0px 1px 0px, #0000000d 0px 2px 7px,
+      #0000000f 0px 12px 22px;
+  }
+  .fadeIn {
+    animation: fadeIn 0.8s ease-in-out;
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+      
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.dots:hover > img, .dots:hover > p {
+  opacity: 1;
+}
