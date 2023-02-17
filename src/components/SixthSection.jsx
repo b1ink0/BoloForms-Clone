@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Icon3 from "../icons/Icon3";
-import Icon1 from "../icons/icon1";
+import Icon1 from "../icons/Icon1";
 import img1 from "../assets/sixth_section_img_1.jpeg";
 import Reviews from "./sub-components/Reviews";
 

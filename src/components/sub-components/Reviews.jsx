@@ -1,7 +1,7 @@
 import React from "react";
 import img2 from "../../assets/forth_section_img_2.svg";
 import Icon2 from "../../icons/Icon2";
-import Icon1 from "../../icons/icon1";
+import Icon1 from "../../icons/Icon1";
 import Icon3 from "../../icons/Icon3";
 
 export default function Reviews({
